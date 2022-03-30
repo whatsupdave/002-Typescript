@@ -1,11 +1,12 @@
-var output2 = document.getElementById("konvertavimas");
-var btKonvertuoti = document.getElementById("konvertuoti");
-var cm = document.getElementById("var_cm");
-var coliai = function (cm) {
+"use strict";
+const output2 = document.getElementById("konvertavimas");
+const btKonvertuoti = document.getElementById("konvertuoti");
+let cm = document.getElementById("var_cm");
+const coliai = (cm) => {
     return cm * 0.39370;
 };
-var skaiciuoti = function () {
-    var centimetrai = cm.valueAsNumber;
+const skaiciuoti = () => {
+    let centimetrai = cm.valueAsNumber;
     if (output2 != null) {
         output2.innerHTML = '' + coliai(centimetrai);
     }

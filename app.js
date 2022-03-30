@@ -1,18 +1,19 @@
+"use strict";
 // Kintamieji
-var output = document.getElementById("atsakymas");
-var btSkaiciuoti = document.getElementById("skaiciuoti");
-var inX = document.getElementById("var_x");
-var inY = document.getElementById("var_y");
+const output = document.getElementById("atsakymas");
+const btSkaiciuoti = document.getElementById("skaiciuoti");
+let inX = document.getElementById("var_x");
+let inY = document.getElementById("var_y");
 ;
-var distance = function (p) {
+const distance = (p) => {
     return Math.sqrt(p.x * p.x + p.y * p.y);
 };
-var taskas = {
+let taskas = {
     x: 5,
     y: 5
 };
 // f-cijos
-var fSuskaiciuoti = function () {
+const fSuskaiciuoti = () => {
     taskas.x = +inX.value;
     taskas.y = +inY.value;
     if (output != null) {
